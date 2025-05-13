@@ -1,0 +1,130 @@
+/* General page styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Centering all content vertically and horizontally */
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #444;
+}
+
+/* Song list container */
+.music-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Individual song card */
+.song-card {
+    background-color: #faf7b7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(19, 11, 11, 0.1);
+    padding: 18px 20px;
+    width: 260px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+
+.song-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.song-card a {
+    text-decoration: none;
+    color: #302a2a;
+    font-weight: bold;
+    display: block;
+    font-size: 18px;
+}
+
+.song-card a:hover {
+    text-decoration: underline;
+    color: #007BFF;
+}
+
+/* Optional: Custom toggle/play button style */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 9em;
+    height: 2.6em;
+    font-size: 0.875rem;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #313033;
+    transition: all 0.4s;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.switch .slider .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    user-select: none;
+    transition: all 0.4s;
+    color: white;
+}
+
+.switch .slider .ball {
+    background-color: #fff;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    position: absolute;
+    left: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+    background-color: #8a5cd4;
+}
+
+.switch input:checked + .slider .ball {
+    left: 72%;
+    transform: translateY(-50%) rotate(360deg);
+}
+
+.switch input:checked + .slider .title {
+    left: 40%;
+}
