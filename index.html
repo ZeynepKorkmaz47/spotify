@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MÜZİK LİSTESİ</title>
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="utf-8">
+  <title>MÜZİK LİSTESİ</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- load data first -->
+  <script src="/js/songs.js" defer></script>
+  <!-- then the renderer -->
+  <script src="/js/main.js" defer></script>
 </head>
 <body>
-
-<h1>KARIŞIK LİSTE</h1>
-<div id="musicList" class="switch"></div>
-
-<script src="js/musicList.js" type="text/javascript" ></script>
-
+  <h1>KARIŞIK LİSTE</h1>
+  <div class="music-container">
+    <!-- JS will populate this -->
+  </div>
 </body>
 </html>
